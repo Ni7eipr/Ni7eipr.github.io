@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Righteous:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.0" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Ni7eipr, Sec, Web" />
+
+
+
+
+  
+
+
+  <link rel="alternate" href="/atom.xml" title="Ni7eipr" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="有时候过不去的不是一个坎，而是心中的那一份执迷。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="404 页面找不到了">
+<meta property="og:url" content="https://Ni7eipr.github.io/404.html">
+<meta property="og:site_name" content="Ni7eipr">
+<meta property="og:description" content="有时候过不去的不是一个坎，而是心中的那一份执迷。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-04-08T05:24:06.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="404 页面找不到了">
+<meta name="twitter:description" content="有时候过不去的不是一个坎，而是心中的那一份执迷。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.0.0',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://Ni7eipr.github.io/404.html"/>
+
+
+
+
+
+  <title>sql函数简记 | Ni7eipr</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ni7eipr</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">有时候过不去的不是一个坎，而是心中的那一份执迷。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+
+            
+              首页
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+
+            
+              标签
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+
+            
+              分类
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+
+            
+              归档
+            
+
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+
+            
+              关于
+            
+
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+<script color="34,34,34" zindex="-1" opacity="1" count="150" src="/js/fun.min.js"></script>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Ni7eipr.github.io/2016/11/04/post/sql函数简记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ni7eipr">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ni7eipr">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">sql函数简记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-11-04T17:00:33+08:00">2016-11-04</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web/" itemprop="url" rel="index">
+                    <span itemprop="name">web</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web/sql函数简记/" itemprop="url" rel="index">
+                    <span itemprop="name">sql函数简记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/11/04/post/sql函数简记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2016/11/04/post/sql函数简记/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="sql函数优先级"><a href="#sql函数优先级" class="headerlink" title="sql函数优先级"></a>sql函数优先级</h2><table>
+<thead>
+<tr>
+<th>操作符</th>
+<th>优先级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:=</td>
+<td>1</td>
+</tr>
+<tr>
+<td>｜｜, OR, XOR</td>
+<td>2</td>
+</tr>
+<tr>
+<td>&amp;&amp;, AND</td>
+<td>3</td>
+</tr>
+<tr>
+<td>NOT</td>
+<td>4</td>
+</tr>
+<tr>
+<td>BETWEEN, CASE, WHEN, THEN, ELSE</td>
+<td>5</td>
+</tr>
+<tr>
+<td>=, &lt;=&gt;, &gt;=, &gt;, &lt;=, &lt;, &lt;&gt;, !=, IS, LIKE, REGEXP, IN</td>
+<td>6</td>
+</tr>
+<tr>
+<td>\</td>
+<td></td>
+<td>7</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>8</td>
+</tr>
+<tr>
+<td>&lt;&lt;, &gt;&gt;</td>
+<td>9</td>
+</tr>
+<tr>
+<td>-, +</td>
+<td>10</td>
+</tr>
+<tr>
+<td>*, /, DIV, %, MOD</td>
+<td>11</td>
+</tr>
+<tr>
+<td>^</td>
+<td>12</td>
+</tr>
+<tr>
+<td>- (一元减号), ~ (一元比特反转)</td>
+<td>12</td>
+</tr>
+<tr>
+<td>!</td>
+<td>13</td>
+</tr>
+<tr>
+<td>BINARY, COLLATE</td>
+<td>14</td>
+</tr>
+</tbody>
+</table>
+<p>注释：假如 HIGH_NOT_PRECEDENCE SQL 模式被激活，则 NOT 的优先级同 the ! 操作符相同。</p>
+<h2 id="比较运算"><a href="#比较运算" class="headerlink" title="比较运算"></a>比较运算</h2><p>比较运算产生的结果为1(TRUE)、0 (FALSE)或 NULL。这些运算可用于数字和字符串。根据需要，字符串可自动转换为数字，而数字也可自动转换为字符串。</p>
+<h2 id="控制流程函数"><a href="#控制流程函数" class="headerlink" title="控制流程函数"></a>控制流程函数</h2><p>CASE 1 WHEN 1 THEN 2<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt;  SELECT CASE 1 WHEN 1 THEN 'one' WHEN 2 THEN 'two' ELSE 'more' END;</span><br><span class="line">+<span class="comment">------------------------------------------------------------+</span></span><br><span class="line">| CASE 1 WHEN 1 THEN 'one' WHEN 2 THEN 'two' ELSE 'more' <span class="keyword">END</span> |</span><br><span class="line">+<span class="comment">------------------------------------------------------------+</span></span><br><span class="line">| one                                                        |</span><br><span class="line">+<span class="comment">------------------------------------------------------------+</span></span><br><span class="line"><span class="number">1</span> <span class="keyword">row</span> <span class="keyword">in</span> <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br><span class="line"></span><br><span class="line">mysql&gt;  <span class="keyword">SELECT</span> <span class="keyword">CASE</span> <span class="number">2</span> <span class="keyword">WHEN</span> <span class="number">1</span> <span class="keyword">THEN</span> <span class="string">'one'</span> <span class="keyword">WHEN</span> <span class="number">2</span> <span class="keyword">THEN</span> <span class="string">'two'</span> <span class="keyword">ELSE</span> <span class="string">'more'</span> <span class="keyword">END</span>;</span><br><span class="line">+<span class="comment">------------------------------------------------------------+</span></span><br><span class="line">| CASE 2 WHEN 1 THEN 'one' WHEN 2 THEN 'two' ELSE 'more' <span class="keyword">END</span> |</span><br><span class="line">+<span class="comment">------------------------------------------------------------+</span></span><br><span class="line">| two                                                        |</span><br><span class="line">+<span class="comment">------------------------------------------------------------+</span></span><br><span class="line"><span class="number">1</span> <span class="keyword">row</span> <span class="keyword">in</span> <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>IF(expr1,expr2,expr3)<br>expr1 是TRUE,返回值为expr2; 否则返回expr3。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT IF(1,2,3);</span><br><span class="line">+-----------+</span><br><span class="line">| IF(1,2,3) |</span><br><span class="line">+-----------+</span><br><span class="line">|         2 |</span><br><span class="line">+-----------+</span><br><span class="line">1 row in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; SELECT IF(0,2,3);</span><br><span class="line">+-----------+</span><br><span class="line">| IF(0,2,3) |</span><br><span class="line">+-----------+</span><br><span class="line">|         3 |</span><br><span class="line">+-----------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>IFNULL(expr1,expr2)<br>expr1 不为 NULL，返回 expr1; 否则返回 expr2。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT IFNULL(2,3);</span><br><span class="line">+-------------+</span><br><span class="line">| IFNULL(1,2) |</span><br><span class="line">+-------------+</span><br><span class="line">|           2 |</span><br><span class="line">+-------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; SELECT IFNULL(0,3);</span><br><span class="line">+-------------+</span><br><span class="line">| IFNULL(0,2) |</span><br><span class="line">+-------------+</span><br><span class="line">|           3 |</span><br><span class="line">+-------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>NULLIF(expr1,expr2)<br>expr1 = expr2 ,返回NULL，否则返回 expr1。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT NULLIF(1,1);</span><br><span class="line">+-------------+</span><br><span class="line">| NULLIF(1,1) |</span><br><span class="line">+-------------+</span><br><span class="line">|        NULL |</span><br><span class="line">+-------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt;</span><br><span class="line">mysql&gt; SELECT NULLIF(1,2);</span><br><span class="line">+-------------+</span><br><span class="line">| NULLIF(1,2) |</span><br><span class="line">+-------------+</span><br><span class="line">|           1 |</span><br><span class="line">+-------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>ASCII(str)<br>返回值为字符串str 的最左字符的数值。<br>假如str为空字符串，则返回值为 0 。<br>假如str 为NULL，则返回值为 NULL。<br>ASCII()用于带有从 0到255的数值的字符。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT ASCII(&quot;a&quot;);</span><br><span class="line">+------------+</span><br><span class="line">| ASCII(&quot;a&quot;) |</span><br><span class="line">+------------+</span><br><span class="line">|         97 |</span><br><span class="line">+------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; SELECT ASCII(&quot;ab&quot;);</span><br><span class="line">+-------------+</span><br><span class="line">| ASCII(&quot;ab&quot;) |</span><br><span class="line">+-------------+</span><br><span class="line">|          97 |</span><br><span class="line">+-------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>ORD(str) 同上</p>
+<hr>
+<p>BIN(N)<br>返回值为N的二进制值的字符串表示。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT BIN(2);</span><br><span class="line">+--------+</span><br><span class="line">| BIN(2) |</span><br><span class="line">+--------+</span><br><span class="line">| 10     |</span><br><span class="line">+--------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>BIT_LENGTH(str)<br>返回值为二进制的字符串str 长度。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT BIT_LENGTH(2);</span><br><span class="line">+---------------+</span><br><span class="line">| BIT_LENGTH(2) |</span><br><span class="line">+---------------+</span><br><span class="line">|             8 |</span><br><span class="line">+---------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>CHAR(N,… [USING charset])<br>CHAR()将每个参数N理解为一个整数，其返回值为一个包含这些整数的代码值所给出的字符的字符串。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT CHAR(77,121,83,81,&apos;76&apos;);</span><br><span class="line">+-------------------------+</span><br><span class="line">| CHAR(77,121,83,81,&apos;76&apos;) |</span><br><span class="line">+-------------------------+</span><br><span class="line">| MySQL                   |</span><br><span class="line">+-------------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<p>大于 255的CHAR()参数被转换为多结果字符。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT HEX(CHAR(1,0)), HEX(CHAR(256));</span><br><span class="line">+----------------+----------------+</span><br><span class="line">| HEX(CHAR(1,0)) | HEX(CHAR(256)) |</span><br><span class="line">+----------------+----------------+</span><br><span class="line">| 0100           | 0100           |</span><br><span class="line">+----------------+----------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>CHAR_LENGTH(str)<br>返回值为字符串str 的长度，长度的单位为字符。一个多字节字符算作一个单字符。对于一个包含五个二字节字符集, LENGTH()返回值为 10, 而CHAR_LENGTH()的返回值为5。</p>
+<hr>
+<p>CHARACTER_LENGTH(str)<br>CHARACTER_LENGTH()是CHAR_LENGTH()的同义词。</p>
+<hr>
+<p>COMPRESS(string_to_compress)<br>压缩一个字符串。这个函数要求 MySQL已经用一个诸如zlib的压缩库压缩过。 否则，返回值始终是NULL。UNCOMPRESS() 可将压缩过的字符串进行解压缩。</p>
+<hr>
+<p>CONCAT(str1,str2,…)返回结果为连接参数产生的字符串。如有任何一个参数为NULL ，则返回值为 NULL。<br>如果自变量中含有任一二进制字符串，则结果为一个二进制字符串。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT CONCAT(&apos;My&apos;, &apos;S&apos;, &apos;QL&apos;);</span><br><span class="line">+-------------------------+</span><br><span class="line">| CONCAT(&apos;My&apos;, &apos;S&apos;, &apos;QL&apos;) |</span><br><span class="line">+-------------------------+</span><br><span class="line">| MySQL                   |</span><br><span class="line">+-------------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>CONCAT_WS(separator,str1,str2,…)<br>第一个参数是其它参数的分隔符。分隔符的位置放在要连接的两个字符串之间。分隔符可以是一个字符串，也可以是其它参数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT CONCAT_WS(&apos;,&apos;,&apos;a&apos;,&apos;b&apos;,&apos;c&apos;);</span><br><span class="line">+----------------------------+</span><br><span class="line">| CONCAT_WS(&apos;,&apos;,&apos;a&apos;,&apos;b&apos;,&apos;c&apos;) |</span><br><span class="line">+----------------------------+</span><br><span class="line">| a,b,c                      |</span><br><span class="line">+----------------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>CONV(N,from_base,to_base)<br>不同数基间转换数字。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT CONV(2,10,2);</span><br><span class="line">+--------------+</span><br><span class="line">| CONV(2,10,2) |</span><br><span class="line">+--------------+</span><br><span class="line">| 10           |</span><br><span class="line">+--------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>ELT(N,str1,str2,str3,…)若N = 1，则返回值为 str1 ，若N = 2，则返回值为 str2。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT ELT(3, &apos;1&apos;, &apos;2&apos;, &apos;3&apos;, &apos;4&apos;);</span><br><span class="line">+----------------------------+</span><br><span class="line">| ELT(3, &apos;1&apos;, &apos;2&apos;, &apos;3&apos;, &apos;4&apos;) |</span><br><span class="line">+----------------------------+</span><br><span class="line">| 3                          |</span><br><span class="line">+----------------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>EXPORT_SET(bits,on,off[,separator[,number_of_bits]])<br>比特操作字符串</p>
+<hr>
+<p>FIELD(str,str1,str2,str3,…)<br>返回值为str1, str2, str3,……列表中的str的位置。</p>
+<hr>
+<p>HEX(N_or_S)如果N_OR_S 是一个数字，则返回一个 十六进制值 N 的字符串表示，在这里， N 是一个longlong (BIGINT)数。这相当于 CONV(N,10,16)。如果N_OR_S 是一个字符串，则返回值为一个N_OR_S的十六进制字符串表示</p>
+<hr>
+<p>INSERT(str,pos,len,newstr)返回字符串 str, 其子字符串起始于 pos 位置和长期被字符串 newstr取代的len 字符。 如果pos 超过字符串长度，则返回值为原始字符串。 假如len的长度大于其它字符串的长度，则从位置pos开始替换。若任何一个参数为null，则返回值为NULL。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT INSERT(&apos;123456789&apos;, 3, 4, &apos;00&apos;);</span><br><span class="line">+---------------------------------+</span><br><span class="line">| INSERT(&apos;123456789&apos;, 3, 4, &apos;00&apos;) |</span><br><span class="line">+---------------------------------+</span><br><span class="line">| 1200789                         |</span><br><span class="line">+---------------------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>INSTR(str,substr)返回字符串 str 中子字符串的第一个出现位置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT INSTR(&apos;123456&apos;, &apos;56&apos;);</span><br><span class="line">+-----------------------+</span><br><span class="line">| INSTR(&apos;123456&apos;, &apos;56&apos;) |</span><br><span class="line">+-----------------------+</span><br><span class="line">|                     5 |</span><br><span class="line">+-----------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>LCASE(str)LCASE() 是 LOWER()的同义词。</p>
+<hr>
+<p>LEFT(str,len)返回从字符串str 开始的len 最左字符。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT LEFT(&apos;123456789&apos;, 5);</span><br><span class="line">+----------------------+</span><br><span class="line">| LEFT(&apos;123456789&apos;, 5) |</span><br><span class="line">+----------------------+</span><br><span class="line">| 12345                |</span><br><span class="line">+----------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>LENGTH(str)返回值为字符串str 的长度，单位为字节。一个多字节字符算作多字节。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT LENGTH(&apos;12345&apos;);</span><br><span class="line">+-----------------+</span><br><span class="line">| LENGTH(&apos;12345&apos;) |</span><br><span class="line">+-----------------+</span><br><span class="line">|               5 |</span><br><span class="line">+-----------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; SELECT LENGTH(&apos;你好&apos;);</span><br><span class="line">+----------------+</span><br><span class="line">| LENGTH(&apos;你好&apos;) |</span><br><span class="line">+----------------+</span><br><span class="line">|              4 |</span><br><span class="line">+----------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>LOAD_FILE(file_name)读取文件并将这一文件按照字符串的格式返回。</p>
+<ul>
+<li>文件的位置必须在服务器上,</li>
+<li>你必须为文件制定路径全名，</li>
+<li>而且你还必须拥有FILE 特许权。</li>
+<li>文件必须可读取，</li>
+<li>文件容量必须小于 max_allowed_packet字节。<br>若文件不存在，或因不满足上述条件而不能被读取， 则函数返回值为 NULL。</li>
+</ul>
+<hr>
+<p>LOCATE(substr,str) , LOCATE(substr,str,pos)第一个语法返回字符串 str中子字符串substr的第一个出现位置。第二个语法返回返回子串 substr 在字符串 str 中的第 pos 位置后第一次出现的位置。如若substr 不在str中，则返回值为0。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT LOCATE(&apos;456&apos;, &apos;123456456&apos;);</span><br><span class="line">+----------------------------+</span><br><span class="line">| LOCATE(&apos;456&apos;, &apos;123456456&apos;) |</span><br><span class="line">+----------------------------+</span><br><span class="line">|                          4 |</span><br><span class="line">+----------------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; SELECT LOCATE(&apos;456&apos;, &apos;123456456&apos;, 5);</span><br><span class="line">+-------------------------------+</span><br><span class="line">| LOCATE(&apos;456&apos;, &apos;123456456&apos;, 5) |</span><br><span class="line">+-------------------------------+</span><br><span class="line">|                             7 |</span><br><span class="line">+-------------------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>LOWER(str)返回字符串 str 以及所有根据最新的字符集映射表变为小写字母的字符</p>
+<hr>
+<p>LPAD(str,len,padstr)返回字符串 str, 其左边由字符串padstr 填补到len 字符长度。假如str 的长度大于len, 则返回值被缩短至 len 字符。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT LPAD(&apos;123&apos;,4,&apos;0&apos;);</span><br><span class="line">+-------------------+</span><br><span class="line">| LPAD(&apos;123&apos;,4,&apos;0&apos;) |</span><br><span class="line">+-------------------+</span><br><span class="line">| 0123              |</span><br><span class="line">+-------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; SELECT LPAD(&apos;123&apos;,2,&apos;0&apos;);</span><br><span class="line">+-------------------+</span><br><span class="line">| LPAD(&apos;123&apos;,2,&apos;0&apos;) |</span><br><span class="line">+-------------------+</span><br><span class="line">| 12                |</span><br><span class="line">+-------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>LTRIM(str)返回字符串 str ，其引导空格字符被删除。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT LTRIM(&apos;  0 0  &apos;);</span><br><span class="line">+------------------+</span><br><span class="line">| LTRIM(&apos;  0 0  &apos;) |</span><br><span class="line">+------------------+</span><br><span class="line">| 0 0              |</span><br><span class="line">+------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; SELECT LENGTH(LTRIM(&apos;  0 0  &apos;));</span><br><span class="line">+--------------------------+</span><br><span class="line">| LENGTH(LTRIM(&apos;  0 0  &apos;)) |</span><br><span class="line">+--------------------------+</span><br><span class="line">|                        5 |</span><br><span class="line">+--------------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<p>MAKE_SET(bits,str1,str2,…)返回一个设定值 (一个包含被‘,’号分开的字字符串的字符串) ，由在bits 组中具有相应的比特的字符串组成。str1 对应比特 0, str2 对应比特1,以此类推。str1, str2, …中的 NULL值不会被添加到结果中。</p>
+<hr>
+<p>MID(str,pos,len)MID(str,pos,len) 是 SUBSTRING(str,pos,len)的同义词。</p>
+<hr>
+<p>OCT(N)返回一个 N的八进制值的字符串表示，其中 N 是一个longlong (BIGINT)数。这等同于CONV(N,10,8)。若N 为 NULL ，则返回值为NULL。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT OCT(8);</span><br><span class="line">+--------+</span><br><span class="line">| OCT(8) |</span><br><span class="line">+--------+</span><br><span class="line">| 10     |</span><br><span class="line">+--------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<p>OCTET_LENGTH(str)OCTET_LENGTH() 是 LENGTH()的同义词。</p>
+<hr>
+<p>ORD(str)若字符串str 的最左字符是一个多字节字符，则返回该字符的代码， 代码的计算通过使用以下公式计算其组成字节的数值而得出:(1st byte code)(2nd byte code × 256)(3rd byte code × 2562) …假如最左字符不是一个多字节字符，那么 ORD()和函数ASCII()返回相同的值。</p>
+<hr>
+<p>POSITION(substr IN str)POSITION(substr IN str)是 LOCATE(substr,str)同义词。</p>
+<hr>
+<p>QUOTE(str)引证一个字符串，由此产生一个在SQL语句中可用作完全转义数据值的结果。 返回的字符串由单引号标注，每例都带有单引号 (‘’’)、 反斜线符号 (‘\’)、 ASCII NUL以及前面有反斜线符号的Control-Z 。如果自变量的值为NULL, 则返回不带单引号的单词 “NULL”。</p>
+<hr>
+<p>REPEAT(str,count)返回一个由重复的字符串str 组成的字符串，字符串str的数目等于count 。 若 count &lt;= 0,则返回一个空字符串。若str 或 count 为 NULL，则返回 NULL 。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT REPEAT(&apos;123&apos;, 3);</span><br><span class="line">+------------------+</span><br><span class="line">| REPEAT(&apos;123&apos;, 3) |</span><br><span class="line">+------------------+</span><br><span class="line">| 123123123        |</span><br><span class="line">+------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>REPLACE(str,from_str,to_str)返回字符串str 以及所有被字符串to_str替代的字符串from_str 。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT REPLACE(&apos;101010101&apos;, &apos;0&apos;, &apos;2&apos;);</span><br><span class="line">+--------------------------------+</span><br><span class="line">| REPLACE(&apos;101010101&apos;, &apos;0&apos;, &apos;2&apos;) |</span><br><span class="line">+--------------------------------+</span><br><span class="line">| 121212121                      |</span><br><span class="line">+--------------------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>REVERSE(str)返回字符串 str ，顺序和字符顺序相反。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT REVERSE(&apos;12345&apos;);</span><br><span class="line">+------------------+</span><br><span class="line">| REVERSE(&apos;12345&apos;) |</span><br><span class="line">+------------------+</span><br><span class="line">| 54321            |</span><br><span class="line">+------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>RIGHT(str,len)从字符串str 开始，返回最右len 字符。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT RIGHT(&apos;12345678&apos;, 4);</span><br><span class="line">+----------------------+</span><br><span class="line">| RIGHT(&apos;12345678&apos;, 4) |</span><br><span class="line">+----------------------+</span><br><span class="line">| 5678                 |</span><br><span class="line">+----------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>RPAD(str,len,padstr)返回字符串str, 其右边被字符串 padstr填补至len 字符长度。假如字符串str 的长度大于 len,则返回值被缩短到与 len 字符相同长度。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT RPAD(&apos;123&apos;,5,&apos;0&apos;);</span><br><span class="line">+-------------------+</span><br><span class="line">| RPAD(&apos;123&apos;,5,&apos;0&apos;) |</span><br><span class="line">+-------------------+</span><br><span class="line">| 12300             |</span><br><span class="line">+-------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>RTRIM(str)返回字符串 str ，结尾空格字符被删去。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT RTRIM(&apos;123   &apos;);</span><br><span class="line">+-----------------+</span><br><span class="line">| RTRIM(&apos;123   &apos;) |</span><br><span class="line">+-----------------+</span><br><span class="line">| 123             |</span><br><span class="line">+-----------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>SOUNDEX(str)从str返回一个soundex字符串。 两个具有几乎同样探测的字符串应该具有同样的 soundex 字符串。一个标准的soundex 字符串的长度为4个字符，然而SOUNDEX() 函数会返回一个人以长度的字符串。 可使用结果中的SUBSTRING() 来得到一个标准 soundex 字符串。在str中，会忽略所有未按照字母顺序排列的字符。 所有不在A-Z范围之内的国际字母符号被视为元音字母。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT SOUNDEX(&apos;Hello&apos;);</span><br><span class="line">  -&gt; &apos;H400&apos;</span><br><span class="line">mysql&gt; SELECT SOUNDEX(&apos;Quadratically&apos;);</span><br><span class="line">  -&gt; &apos;Q36324&apos;</span><br></pre></td></tr></table></figure>
+<hr>
+<p>expr1 SOUNDS LIKE expr2这相当于SOUNDEX(expr1) = SOUNDEX(expr2)。</p>
+<hr>
+<p>SPACE(N)返回一个由N 间隔符号组成的字符串。<br>两个空格<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT SPACE(2);</span><br><span class="line">+----------+</span><br><span class="line">| SPACE(2) |</span><br><span class="line">+----------+</span><br><span class="line">|          |</span><br><span class="line">+----------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>SUBSTRING(str,pos) , SUBSTRING(str FROM pos) SUBSTRING(str,pos,len) , SUBSTRING(str FROM pos FOR len)不带有len 参数的格式从字符串str返回一个子字符串，起始于位置 pos。带有len参数的格式从字符串str返回一个长度同len字符相同的子字符串，起始于位置 pos。 使用 FROM的格式为标准 SQL 语法。也可能对pos使用一个负值。假若这样，则子字符串的位置起始于字符串结尾的pos 字符，而不是字符串的开头位置。在以下格式的函数中可以对pos 使用一个负值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT SUBSTRING(&apos;Quadratically&apos;,5);</span><br><span class="line">  -&gt; &apos;ratically&apos;</span><br><span class="line">mysql&gt; SELECT SUBSTRING(&apos;foobarbar&apos; FROM 4);</span><br><span class="line">  -&gt; &apos;barbar&apos;</span><br><span class="line">mysql&gt; SELECT SUBSTRING(&apos;Quadratically&apos;,5,6);</span><br><span class="line">  -&gt; &apos;ratica&apos;</span><br><span class="line">mysql&gt; SELECT SUBSTRING(&apos;Sakila&apos;, -3);</span><br><span class="line">  -&gt; &apos;ila&apos;</span><br><span class="line">mysql&gt; SELECT SUBSTRING(&apos;Sakila&apos;, -5, 3);</span><br><span class="line">  -&gt; &apos;aki&apos;</span><br><span class="line">mysql&gt; SELECT SUBSTRING(&apos;Sakila&apos; FROM -4 FOR 2);</span><br><span class="line">  -&gt; &apos;ki&apos;</span><br></pre></td></tr></table></figure>
+<hr>
+<p>SUBSTR()是 SUBSTRING()的同义词。</p>
+<hr>
+<p>SUBSTRING_INDEX(str,delim,count)在定界符 delim 以及count 出现前，从字符串str返回自字符串。若count为正值,则返回最终定界符(从左边开始)左边的一切内容。若count为负值，则返回定界符（从右边开始）右边的一切内容。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT SUBSTRING_INDEX(&apos;www.baidu.com&apos;, &apos;.&apos;, 2);</span><br><span class="line">+------------------------------------------+</span><br><span class="line">| SUBSTRING_INDEX(&apos;www.baidu.com&apos;, &apos;.&apos;, 2) |</span><br><span class="line">+------------------------------------------+</span><br><span class="line">| www.baidu                                |</span><br><span class="line">+------------------------------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>TRIM([{BOTH | LEADING | TRAILING} [remstr] FROM] str) TRIM(remstr FROM] str)返回字符串 str ， 其中所有remstr 前缀和/或后缀都已被删除。若分类符BOTH、LEADIN或TRAILING中没有一个是给定的,则假设为BOTH 。 remstr 为可选项，在未指定情况下，可删除空格。</p>
+<hr>
+<p>UCASE(str)UCASE()是UPPER()的同义词。</p>
+<hr>
+<p>UNCOMPRESS(string_to_uncompress)对经COMPRESS()函数压缩后的字符串进行解压缩。若参数为压缩值，则结果为 NULL。这个函数要求 MySQL 已被诸如zlib 之类的压缩库编译过。否则, 返回值将始终是 NULL。</p>
+<hr>
+<p>UNCOMPRESSED_LENGTH(compressed_string)返回压缩字符串压缩前的长度。</p>
+<hr>
+<p>UNHEX(str)执行从HEX(str)的反向操作。就是说，它将参数中的每一对十六进制数字理解为一个数字，并将其转化为该数字代表的字符。结果字符以二进制字符串的形式返回。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select hex(&quot;asdf&quot;);</span><br><span class="line">+-------------+</span><br><span class="line">| hex(&quot;asdf&quot;) |</span><br><span class="line">+-------------+</span><br><span class="line">| 61736466    |</span><br><span class="line">+-------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; select unhex(&quot;61736466&quot;);</span><br><span class="line">+-------------------+</span><br><span class="line">| unhex(&quot;61736466&quot;) |</span><br><span class="line">+-------------------+</span><br><span class="line">| asdf              |</span><br><span class="line">+-------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>UPPER(str)返回字符串str， 以及根据最新字符集映射转化为大写字母的字符</p>
+<hr>
+<p>STRCMP(expr1,expr2)若所有的字符串均相同，则返回STRCMP()，若根据当前分类次序，第一个参数小于第二个，则返回 -1，其它情况返回 1 。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT STRCMP(&apos;123456&apos;, &apos;12345&apos;);</span><br><span class="line">+---------------------------+</span><br><span class="line">| STRCMP(&apos;123456&apos;, &apos;12345&apos;) |</span><br><span class="line">+---------------------------+</span><br><span class="line">|                         1 |</span><br><span class="line">+---------------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; SELECT STRCMP(&apos;123456&apos;, &apos;123456&apos;);</span><br><span class="line">+----------------------------+</span><br><span class="line">| STRCMP(&apos;123456&apos;, &apos;123456&apos;) |</span><br><span class="line">+----------------------------+</span><br><span class="line">|                          0 |</span><br><span class="line">+----------------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; SELECT STRCMP(&apos;12345&apos;, &apos;123456&apos;);</span><br><span class="line">+---------------------------+</span><br><span class="line">| STRCMP(&apos;12345&apos;, &apos;123456&apos;) |</span><br><span class="line">+---------------------------+</span><br><span class="line">|                        -1 |</span><br><span class="line">+---------------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>被零除的结果为 NULL：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select 1/0;</span><br><span class="line">+------+</span><br><span class="line">| 1/0  |</span><br><span class="line">+------+</span><br><span class="line">| NULL |</span><br><span class="line">+------+</span><br><span class="line">1 row in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>打赏</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Ni7eipr 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/web/" rel="tag"># web</a>
+          
+            <a href="/tags/sql函数简记/" rel="tag"># sql函数简记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/30/提权后门/dirtycow提权/" rel="next" title="Dirtycow 提权">
+                <i class="fa fa-chevron-left"></i> Dirtycow 提权
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/12/提权后门/ssh_rookit/" rel="prev" title="ssh rookit">
+                ssh rookit <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Ni7eipr" />
+            
+              <p class="site-author-name" itemprop="name">Ni7eipr</p>
+              <p class="site-description motion-element" itemprop="description">有时候过不去的不是一个坎，而是心中的那一份执迷。</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    <span class="site-state-item-count">24</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Ni7eipr" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://Ni7eipr.github.io" title="Ni7eipr" target="_blank">Ni7eipr</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#sql函数优先级"><span class="nav-number">1.</span> <span class="nav-text">sql函数优先级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#比较运算"><span class="nav-number">2.</span> <span class="nav-text">比较运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#控制流程函数"><span class="nav-number">3.</span> <span class="nav-text">控制流程函数</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ni7eipr</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'Ni7eipr',
+            repo: 'https://ni7eipr.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '249a531df811828542c052853b95cdc06d1e1b70',
+            
+                client_id: '8a707471e4b8470060cb'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=6.0.0"></script>
+
+
+  
+
+</body>
+</html>
