@@ -345,38 +345,6 @@
   </entry>
   
   <entry>
-    <title>paramiko</title>
-    <link href="https://Ni7eipr.com/2016/05/25/python/paramiko/"/>
-    <id>https://Ni7eipr.com/2016/05/25/python/paramiko/</id>
-    <published>2016-05-25T00:55:55.000Z</published>
-    <updated>2018-04-08T05:24:06.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>paramiko模块是用python语言写的一个模块，遵循SSH2协议，支持以加密和认证的方式，进行远程服务器的连接</p><h3 id="执行命令"><a href="#执行命令" class="headerlink" title="执行命令"></a>执行命令</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> paramiko</span><br><span class="line"></span><br><span class="line">ssh = paramiko.SSHClient()</span><br><span class="line">ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())</span><br><span class="line">ssh.connect(<span class="string">"某IP地址"</span>,<span class="number">22</span>,<span class="string">"用户名"</span>, <span class="string">"口令"</span>)</span><br><span class="line">stdin, stdout, stderr = ssh.exec_command(<span class="string">"你的命令"</span>)</span><br><span class="line"><span class="keyword">print</span> stdout.readlines()</span><br><span class="line">ssh.close()</span><br></pre></td></tr></table></figure><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> paramiko</span><br><span class="line"></span><br><span class="line">t = paramiko.Transport((<span class="string">"某IP地址"</span>,<span class="number">22</span>))</span><br><span class="line">t.connect(username = <span class="string">"用户名"</span>, password = <span class="string">"口令"</span>)</span><br><span class="line">sftp = paramiko.SFTPClient.from_transport(t)</span><br><span class="line">remotepath=<span class="string">'/tmp/test.txt'</span></span><br><span class="line">localpath=<span class="string">'/tmp/test.txt'</span></span><br><span class="line">sftp.put(localpath,remotepath)</span><br><span class="line">t.close()</span><br></pre></td></tr></table></figure><h3 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> paramiko</span><br><span class="line"></span><br><span class="line">t = paramiko.Transport((<span class="string">"某IP地址"</span>,<span class="number">22</span>))</span><br><span class="line">t.connect(username = <span class="string">"用户名"</span>, password = <span class="string">"口令"</span>)</span><br><span class="line">sftp = paramiko.SFTPClient.from_transport(t)</span><br><span class="line">remotepath=<span class="string">'/tmp/test.txt'</span></span><br><span class="line">localpath=<span class="string">'/tmp/test.txt'</span></span><br><span class="line">sftp.get(remotepath, localpath)</span><br><span class="line">t.close()</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;paramiko模块是用python语言写的一个模块，遵循SSH2协议，支持以加密和认证的方式，进行远程服务器的连接&lt;/p&gt;
-&lt;h3 id=&quot;执行命令&quot;&gt;&lt;a href=&quot;#执行命令&quot; class=&quot;headerlink&quot; title=&quot;执行命令&quot;&gt;&lt;/a&gt;执行命令&lt;/h3
-      
-    
-    </summary>
-    
-      <category term="python" scheme="https://Ni7eipr.com/categories/python/"/>
-    
-      <category term="模块" scheme="https://Ni7eipr.com/categories/python/%E6%A8%A1%E5%9D%97/"/>
-    
-    
-      <category term="python" scheme="https://Ni7eipr.com/tags/python/"/>
-    
-      <category term="模块" scheme="https://Ni7eipr.com/tags/%E6%A8%A1%E5%9D%97/"/>
-    
-      <category term="paramiko" scheme="https://Ni7eipr.com/tags/paramiko/"/>
-    
-  </entry>
-  
-  <entry>
     <title>pyinotify</title>
     <link href="https://Ni7eipr.com/2016/05/25/python/pyinotify/"/>
     <id>https://Ni7eipr.com/2016/05/25/python/pyinotify/</id>
@@ -405,6 +373,38 @@
       <category term="模块" scheme="https://Ni7eipr.com/tags/%E6%A8%A1%E5%9D%97/"/>
     
       <category term="pyinotify" scheme="https://Ni7eipr.com/tags/pyinotify/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>paramiko</title>
+    <link href="https://Ni7eipr.com/2016/05/25/python/paramiko/"/>
+    <id>https://Ni7eipr.com/2016/05/25/python/paramiko/</id>
+    <published>2016-05-25T00:55:55.000Z</published>
+    <updated>2018-04-08T05:24:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>paramiko模块是用python语言写的一个模块，遵循SSH2协议，支持以加密和认证的方式，进行远程服务器的连接</p><h3 id="执行命令"><a href="#执行命令" class="headerlink" title="执行命令"></a>执行命令</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> paramiko</span><br><span class="line"></span><br><span class="line">ssh = paramiko.SSHClient()</span><br><span class="line">ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())</span><br><span class="line">ssh.connect(<span class="string">"某IP地址"</span>,<span class="number">22</span>,<span class="string">"用户名"</span>, <span class="string">"口令"</span>)</span><br><span class="line">stdin, stdout, stderr = ssh.exec_command(<span class="string">"你的命令"</span>)</span><br><span class="line"><span class="keyword">print</span> stdout.readlines()</span><br><span class="line">ssh.close()</span><br></pre></td></tr></table></figure><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> paramiko</span><br><span class="line"></span><br><span class="line">t = paramiko.Transport((<span class="string">"某IP地址"</span>,<span class="number">22</span>))</span><br><span class="line">t.connect(username = <span class="string">"用户名"</span>, password = <span class="string">"口令"</span>)</span><br><span class="line">sftp = paramiko.SFTPClient.from_transport(t)</span><br><span class="line">remotepath=<span class="string">'/tmp/test.txt'</span></span><br><span class="line">localpath=<span class="string">'/tmp/test.txt'</span></span><br><span class="line">sftp.put(localpath,remotepath)</span><br><span class="line">t.close()</span><br></pre></td></tr></table></figure><h3 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> paramiko</span><br><span class="line"></span><br><span class="line">t = paramiko.Transport((<span class="string">"某IP地址"</span>,<span class="number">22</span>))</span><br><span class="line">t.connect(username = <span class="string">"用户名"</span>, password = <span class="string">"口令"</span>)</span><br><span class="line">sftp = paramiko.SFTPClient.from_transport(t)</span><br><span class="line">remotepath=<span class="string">'/tmp/test.txt'</span></span><br><span class="line">localpath=<span class="string">'/tmp/test.txt'</span></span><br><span class="line">sftp.get(remotepath, localpath)</span><br><span class="line">t.close()</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;paramiko模块是用python语言写的一个模块，遵循SSH2协议，支持以加密和认证的方式，进行远程服务器的连接&lt;/p&gt;
+&lt;h3 id=&quot;执行命令&quot;&gt;&lt;a href=&quot;#执行命令&quot; class=&quot;headerlink&quot; title=&quot;执行命令&quot;&gt;&lt;/a&gt;执行命令&lt;/h3
+      
+    
+    </summary>
+    
+      <category term="python" scheme="https://Ni7eipr.com/categories/python/"/>
+    
+      <category term="模块" scheme="https://Ni7eipr.com/categories/python/%E6%A8%A1%E5%9D%97/"/>
+    
+    
+      <category term="python" scheme="https://Ni7eipr.com/tags/python/"/>
+    
+      <category term="模块" scheme="https://Ni7eipr.com/tags/%E6%A8%A1%E5%9D%97/"/>
+    
+      <category term="paramiko" scheme="https://Ni7eipr.com/tags/paramiko/"/>
     
   </entry>
   
